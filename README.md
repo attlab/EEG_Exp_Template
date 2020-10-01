@@ -12,7 +12,7 @@ Date updated: 09.30.20
 
 I propose we set up directories like this:
 ```
-EEG_Exp
+EEG_Project
 └── Dependencies
 └── EEG_Prepro1
 └── EEG_Raw
@@ -21,9 +21,13 @@ EEG_Exp
 └── Trial_Data
 ```
 
-The "root" level directory is your project name (**EEG_Exp_Template** in this example)
+### EEG_Project (root)
 
-**Scripts:** the code you will use to run preprocessing
+This is your project name (in my examples I use EEG_Exp_Template)
+
+### Scripts
+
+These are the scripts you will use to run the preprocessing
 
 `EEG_Prepro1.m` Does the following:
 
@@ -36,7 +40,11 @@ The "root" level directory is your project name (**EEG_Exp_Template** in this ex
 * interpolate bad channels
 * save in standard EEGLAB format (but in .mat files, not .set/.fdt)
 
-**Dependencies:** library of useful subfunctions
+`EEG_Merge_Recordings.m` Allow you to merge split recordings prior to preprocessing e.g. participant took a bathroom break halfway though the study and you had to stop the recording and disconnect the amp
+
+### Dependencies
+
+A library of subfunctions that support the higher level "Scripts" functions
 
 `EEG_ATTLAB_Import_Data.m` Import data from raw Biosemi/Brain Products files
 
@@ -47,6 +55,8 @@ The "root" level directory is your project name (**EEG_Exp_Template** in this ex
 `EEG_ATTLAB_Visualize_Data.m` Visualizes data that has been cleaned using 'clean_artifacts' and allows easy comparison between new and old data
 
 `EEG_ATTLAB_Merge_Broken_Files.m` Merge two recordings (e.g. participant takes a bathroom break and you have to unplug the cap)
+
+
 
 
 **EEG_Raw:** raw EEG files (currently either Biosemi or Brain Vision format)

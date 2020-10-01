@@ -1,5 +1,5 @@
 %{
-EEG_Merge_Files
+EEG_Merge_Recordings
 Author: Tom Bullock
 Date created: 09.30.20
 Date updated: 09.30.20
