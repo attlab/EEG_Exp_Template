@@ -45,15 +45,18 @@ The "root" level directory is your project name (**EEG_Exp_Template** in this ex
 **EEG_Prepro1:** save files at prepro1 stage
 
 
+Example folder structure
 
+```
 app
-??? screens
-    ??? App
-        ??? screens
-            ??? Admin
-            ?   ??? screens
-            ?       ??? Reports
-            ?       ??? Users
-            ??? Course
-                ??? screens
-                    ??? Assignments
+└── screens
+    └── App
+        └── screens
+            ├── Admin
+            │   └── screens
+            │       ├── Reports
+            │       └── Users
+            └── Course
+                └── screens
+                    └── Assignments
+```
