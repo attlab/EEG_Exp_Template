@@ -10,6 +10,17 @@ Date updated: 09.30.20
 
 ## Directory Structure and Nomenclature 
 
+I propose we set up directories like this:
+```
+EEG_Exp
+└── Dependencies
+└── EEG_Prepro1
+└── EEG_Raw
+└── eeglab2019_1
+└── Scripts
+└── Trial_Data
+```
+
 The "root" level directory is your project name (**EEG_Exp_Template** in this example)
 
 **Scripts:** the code you will use to run preprocessing
@@ -45,16 +56,6 @@ The "root" level directory is your project name (**EEG_Exp_Template** in this ex
 **EEG_Prepro1:** save files at prepro1 stage
 
 
-Example folder structure
 
-```
-EEG_Exp
-└── Dependencies
-└── EEG_Prepro1
-└── EEG_Raw
-└── eeglab2019_1
-└── Scripts
-└── Trial_Data
-```
 
 
