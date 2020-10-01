@@ -56,14 +56,24 @@ A library of subfunctions that support the higher level "Scripts" functions
 
 `EEG_ATTLAB_Merge_Broken_Files.m` Merge two recordings (e.g. participant takes a bathroom break and you have to unplug the cap)
 
+### EEG_Raw
 
+Raw EEG files (currently either Biosemi or Brain Vision format).  You can also place merged files here (saved in .mat format)
 
+### Trial_Data
 
-**EEG_Raw:** raw EEG files (currently either Biosemi or Brain Vision format)
+Trial information (typically in .mat format)
 
-**Trial_Data:** trial data (in .mat format) 
+### eeglab2019_1
 
-**EEG_Prepro1:** save files at prepro1 stage
+EEGLAB (my scripts are designed to work with this version).  The following plugins are required:
+
+### EEG_Prepro1
+
+Contains files preprocessed by `EEG_Prepro1.m`.
+
+etc...
+
 
 
 
