@@ -1,4 +1,4 @@
-function EEG = EEG_ATTLAB_Import_Data(sourceDir,filename,dataFormat,chanlocsPathBESA)
+function EEG = EEG_ATTLAB_Import_Data(sourceDir,filename)
 %{
 EEG_ATTLAB_Import_Data
 Author: Tom Bullock, UCSB Attention Lab
@@ -23,24 +23,23 @@ Dependencies: EEGLAB toolbox with fileio and biosig plugins (I think)
 
 %}
 
-% selects correct file extension
-if strcmp(dataFormat,'Biosemi_bdf')
-    rawFileExt = '.bdf';
-elseif strcmp(dataFormat,'Biosemi_edf')
-    rawFileExt = '.edf';
-elseif strcmp(dataFormat, 'Brain_Vision')
-    rawFileExt = '.vhdr';
-end
 
-% import data into EEGLAB format
-if strcmp(dataFormat,'Brain_Vision')
-    EEG = pop_fileio([sourceDir '/'  filename rawFileExt]);
-else
-    EEG = pop_biosig([sourceDir '/'  filename rawFileExt]);
+% try to import data into EEGLAB format
+try
+    if strcmp(filename(end),'r') % if brain vision format (vhdr)
+        EEG = pop_fileio([sourceDir '/'  filename]);
+    elseif strcmp(filename(end),'f') % if Biosemi format (bdf/edf)
+        EEG = pop_biosig([sourceDir '/'  filename]);
+    end
+    disp(['Importing: ' filename])
+catch % if data already imported into .mat format (e.g. if merged) then just load .mat file instead
+    if strcmp(filename(end),'r')
+        filename = [filename(1:end-5),'.mat'];
+    else 
+        filename = [filename(1:end-4),'.mat'];
+    end
+    load([sourceDir '/' filename]);
+    disp(['Loading: ' filename])
 end
-
-% add channel locations (may need to edit dir for different EEGLAB vers)
-EEG=pop_chanedit(EEG, 'lookup',[chanlocsPathBESA '/standard-10-5-cap385.elp']); 
-  
 
 return

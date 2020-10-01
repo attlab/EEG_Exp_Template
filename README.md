@@ -35,9 +35,25 @@ The "root" level directory is your project name (**EEG_Exp_Template** in this ex
 
 `EEG_ATTLAB_Visualize_Data.m` Visualizes data that has been cleaned using 'clean_artifacts' and allows easy comparison between new and old data
 
+`EEG_ATTLAB_Merge_Broken_Files.m` Merge two recordings (e.g. participant takes a bathroom break and you have to unplug the cap)
+
 
 **EEG_Raw:** raw EEG files (currently either Biosemi or Brain Vision format)
 
 **Trial_Data:** trial data (in .mat format) 
 
 **EEG_Prepro1:** save files at prepro1 stage
+
+
+
+app
+??? screens
+    ??? App
+        ??? screens
+            ??? Admin
+            ?   ??? screens
+            ?       ??? Reports
+            ?       ??? Users
+            ??? Course
+                ??? screens
+                    ??? Assignments

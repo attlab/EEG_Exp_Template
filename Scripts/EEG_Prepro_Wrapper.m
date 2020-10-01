@@ -44,7 +44,7 @@ destDir = [rDir '/' 'EEG_Prepro1']; % clean (artifacts rejected) data
 addpath(genpath([rDir '/' 'Dependencies']))
 
 % set data format to import ('Brain_Vision' or 'Biosemi_bdf' or 'Biosemi_edf')
-dataFormat = 'Brain_Vision';
+%dataFormat = 'Brain_Vision';
 
 % set path to channel locations in EEGLAB (varies betweeb versions)
 chanlocsPathBESA = [eeglabDir '/plugins/dipfit/standard_BESA']; % standard
@@ -63,12 +63,20 @@ for iSub=1:length(subjects)
     % condition loop
     for iCond=1:2
         
-        % set filename 
-        filename = sprintf('sj%02d_Cond%02d_RIT',sjNum,iCond);
-        disp(['Processing ' filename])
+        % set filename.  Provide a .vhdr/.bdf/.edf extension.  Note, if you
+        % have already imported the file into .mat (e.g. if you merged a
+        % broken recording) then the script will ignore the extension and
+        % just load the data AS LONG AS the filename format is consistent
+        % with other files
+        filename = sprintf('sj%02d_Cond%02d_RIT.vhdr',sjNum,iCond);
+        %disp(['Processing ' filename])
 
-        % import raw data into EEGLAB format, add channel locations (BESA)
-        EEG = EEG_ATTLAB_Import_Data(sourceDir,filename,dataFormat,chanlocsPathBESA);
+        % import raw data into EEGLAB format (or load, if already imported
+        % e.g. in the case of merged file)
+        EEG = EEG_ATTLAB_Import_Data(sourceDir,filename);
+        
+        % add channel locations (may need to edit dir for different EEGLAB vers)
+        EEG=pop_chanedit(EEG, 'lookup',[chanlocsPathBESA '/standard-10-5-cap385.elp']); 
         
         % apply initial bandpass filter
         thisLowPass = 100; 
