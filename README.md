@@ -48,15 +48,13 @@ The "root" level directory is your project name (**EEG_Exp_Template** in this ex
 Example folder structure
 
 ```
-app
-└── screens
-    └── App
-        └── screens
-            ├── Admin
-            │   └── screens
-            │       ├── Reports
-            │       └── Users
-            └── Course
-                └── screens
-                    └── Assignments
+EEG_Exp
+└── Dependencies
+└── EEG_Prepro1
+└── EEG_Raw
+└── eeglab2019_1
+└── Scripts
+└── Trial_Data
 ```
+
+
