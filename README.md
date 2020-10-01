@@ -13,13 +13,16 @@ Date updated: 09.30.20
 I propose we set up directories like this:
 ```
 EEG_Project
-└── Dependencies
+└── Dependencies [sync w/GitHub]
+└── Data_Compiled
 └── EEG_Prepro1
 └── EEG_Raw
 └── eeglab2019_1
-└── Scripts
+└── Plots [sync w/GitHub]
+└── Scripts [sync w/GitHub]
 └── Trial_Data
 ```
+Important: Do not attempt to sync folders with large data files (>50 MB) with GitHub as this won't work.  Don't try to sync EEGLAB toolbox as it contains thousands of files and takes forever.
 
 ### EEG_Project (root)
 
