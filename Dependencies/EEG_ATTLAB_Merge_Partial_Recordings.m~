@@ -11,12 +11,8 @@ Inputs:
 brokenDataPath: directory where the partial recordings are stored
 mergedFilename: what you want to call the new merged file (e.g.
 'sj01_Cond01.mat').  Must have full extension.  
-varargin: filenames of partial recordings in the order that you want to
-merge them.  Can take 2 or more inputs e.g. {'sj01_Cond01_p1.bdf','sj01_Cond01_p2.bdf',...}
-
-Output: 
-Script will save a merged data file in .mat format with the designated
-name.  The file will save to the same directory as the partial recordings.
+varargin: filenames of partial recordings e.g.
+{'sj01_Cond01_p1.bdf','sj01_Cond01_p2.bdf'
 
 %}
 

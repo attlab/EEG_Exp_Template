@@ -23,7 +23,7 @@ EEG_Project
 
 ### EEG_Project (root)
 
-This is your project name (in my examples I use EEG_Exp_Template)
+This is your project (and github repository) name.  In my examples I use "EEG_Exp_Template"
 
 ### Scripts
 
