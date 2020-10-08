@@ -8,6 +8,10 @@ Date created: 09.30.20
 
 Date updated: 09.30.20
 
+## Example Data Files
+
+Some example raw data files are available to download here: XXXBOXXX
+
 ## Directory Structure and Nomenclature 
 
 I propose we set up directories like this:
@@ -17,7 +21,7 @@ EEG_Project
 └── Data_Compiled
 └── EEG_Prepro1
 └── EEG_Raw
-└── eeglab2019_1
+└── eeglab2019_1 (or latest version of EEGLAB toolbox)
 └── Plots [sync w/GitHub]
 └── Scripts [sync w/GitHub]
 └── Trial_Data

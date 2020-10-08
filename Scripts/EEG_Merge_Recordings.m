@@ -32,8 +32,8 @@ cd(eeglabDir); eeglab; clear; close all;
 
 % your inputs
 brokenDataPath = '/Users/tombullock/Documents/Psychology/ATTLAB_Repos/EEG_Exp_Template/EEG_Raw'; % what directory are the to-be-merged files in?
-mergedFilename = 'sj01_cond01_RIT.mat'; % what is the desired output filename? (must end in .mat)
-varargin = {'sj01_Cond01_RIT.vhdr','sj01_Cond02_RIT.vhdr'}; % as many files as you want to merge, must be in order, in cell array w/full extension
+mergedFilename = 'sj99_cd01_ri.mat'; % what is the desired output filename? (must end in .mat)
+varargin = {'sj98_cd01_ri.bdf','sj98_cd01_ri.bdf'}; % as many files as you want to merge, must be in order, in cell array w/full extension
 
 % run merge script
 EEG_ATTLAB_Merge_Partial_Recordings(brokenDataPath,mergedFilename,varargin)
