@@ -10,7 +10,7 @@ Date updated: 09.30.20
 
 ## Example Data Files
 
-Some example raw data files are available to download here: XXXBOXXX
+Some example raw data files are available to download [here](https://ucsb.box.com/s/c3gbxa11psgjfbgws1rkvitlb39h0hqk) 
 
 ## Directory Structure and Nomenclature 
 
