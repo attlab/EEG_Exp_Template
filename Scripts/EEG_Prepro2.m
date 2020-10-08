@@ -4,10 +4,12 @@ Author: Tom Bullock, UCSB Attention Lab
 Date created: 10.06.20
 Date updated: 10.06.20
 
-Purpose: Epoch EEG data and match with experiment trial data stored in
+Purpose: Epoch EEG data and sync with experiment trial data stored in
 MATLAB.
 
 Instructions:
+Create directories and set directory paths in script
+Edit filename to match the filename of your raw files
 
 Notes:
 
@@ -85,11 +87,20 @@ for iSub=1:length(subjects)
         
         % epoch data around each trial (make sure to include all trials so
         % that the entire EEG dataset syncs with the behavior)
-        EEG = pop_epoch(EEG,{11,12,13,110},[-.2, 1]);
-        EEG = pop_rmbase(EEG,[-200 -100]);
+        theseEpochCodes = {11,12,13,110};
+        theseEpochTimes = [-.2, 1];
+        thisBaseline = [-200,-100];
+        EEG = pop_epoch(EEG,theseEpochCodes,theseEpochTimes);
+        EEG = pop_rmbase(EEG,thisBaseline);
         
         % add trialMat to EEG structure
         EEG.trialMat = trialMat;
+        
+        % add operations to EEG log
+        EEG.preproSettings.epochCodes = theseEpochCodes;
+        EEG.preproSettings.epochTimes = theseEpochTimes;
+        EEG.preproSettings.baseline = thisBaseline;
+        EEG.preproSettings.sync_EEG_trialMat = 'yes';
         
         % save data
         save([destDir '/' sprintf('sj%02d_cd%02d_ri_prepro2.mat',sjNum,iCond)],'EEG','bad_channel_list')

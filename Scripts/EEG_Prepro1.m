@@ -4,11 +4,15 @@ Author: Tom Bullock, UCSB Attention Lab
 Date created: 09.28.20
 Date updated: 10.06.20
 
-Purpose: Blah...
+Purpose:
+Import data
+Apply filters
+Clean artifacts
+Re-reference
 
 Instructions: 
+Create directories and set directory paths in script
 Edit filename to match the filename of your raw files
-Blah...
 
 Notes:
 Biosemi records to a single bdf file.  If you have issues with event codes
@@ -115,9 +119,9 @@ for iSub=1:length(subjects)
         end
             
         % save original channel locations then remove any extraneous
-        % channels (see chanlocs struct e.g. EKG, Actigraphy)
+        % channels if needed (see chanlocs struct e.g. EKG, Actigraphy)
         originalEEG = EEG;
-        EEG = pop_select(EEG,'nochannel',{'EKG','ACCX'});
+        EEG = pop_select(EEG,'nochannel',{'EKG','ACCX'}); % just examples
         EEG.originalChanlocs = EEG.chanlocs; 
 
         % clean noisy data (all in one function for artifact removal -
