@@ -10,21 +10,25 @@ Date updated: 10.08.20
 
 ## Example Data Files
 
-Some example raw data files are available to download <b>[here](https://ucsb.box.com/s/c3gbxa11psgjfbgws1rkvitlb39h0hqk)</b> 
+Some example raw data files are available to download <b>[here](https://ucsb.box.com/s/c3gbxa11psgjfbgws1rkvitlb39h0hqk)</b>.  
+
+If you are working with these files, download them and position in directory structure (see below)
 
 ## Directory Structure and Nomenclature 
 
-I propose we set up directories like this:
+Set up a directory structure like this:
 ```
 EEG_Project
 └── Dependencies [sync w/GitHub]
-└── Data_Compiled
+└── Data_Compiled [possibly sync w/GitHub but <u>only</u> if small files]
 └── EEG_Prepro1
-└── EEG_Raw
+└── EEG_Prepro2
+└── EEG_Prepro3
+└── EEG_Raw [place raw EEG data files here]
 └── eeglab2019_1 (or latest version of EEGLAB toolbox)
 └── Plots [sync w/GitHub]
 └── Scripts [sync w/GitHub]
-└── Trial_Data
+└── Trial_Data [place trial data files (.mat) here]
 ```
 Important: Do not attempt to sync folders with large data files (>50 MB) with GitHub as this won't work.  Don't try to sync EEGLAB toolbox as it contains thousands of files and takes forever.
 
