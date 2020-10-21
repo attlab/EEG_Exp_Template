@@ -2,7 +2,7 @@
 EEG_Prepro_1
 Author: Tom Bullock, UCSB Attention Lab
 Date created: 09.28.20
-Date updated: 10.06.20
+Date updated: 14.06.20
 
 Purpose:
 Import data
