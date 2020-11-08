@@ -10,7 +10,9 @@ Date updated: 14.08.20
 
 ## Example Data Files
 
-Some example raw data files are available to download <b>[here](https://ucsb.box.com/s/c3gbxa11psgjfbgws1rkvitlb39h0hqk)</b>.  
+Some example raw data files are available to download <b>[here](https://ucsb.box.com/s/c3gbxa11psgjfbgws1rkvitlb39h0hqk)</b>. 
+
+The full physical fatigue response inhibition dataset is available to download <b>[here](https://ucsb.box.com/s/6pz9zw11mtf66n5ou8t7yksyo50y6r6k)</b>.
 
 If you are working with these files, download them and position in directory structure (see below)
 

@@ -123,6 +123,8 @@ for iSub=1:length(subjects)
         originalEEG = EEG;
         EEG = pop_select(EEG,'nochannel',{'EKG','ACCX'}); % just examples
         EEG.originalChanlocs = EEG.chanlocs; 
+        
+        tic
 
         % clean noisy data (all in one function for artifact removal -
         % options are extensively documented in >> help clean_artifacts - )
@@ -133,6 +135,8 @@ for iSub=1:length(subjects)
             'FlatLineCriterion',s.cleanArtifacts.FlatLineCriterion,... 
             'WindowCriterion',s.cleanArtifacts.WindowCriterion,... 
             'WindowCriterionTolerances',s.WindowCriterionTolerances); 
+        
+        toc
         
         % re-reference the data.  If you plan to run ICA, compute the
         % average reference (i.e. thisRef = []), if not, enter the 

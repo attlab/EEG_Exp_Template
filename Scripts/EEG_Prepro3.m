@@ -39,8 +39,9 @@ cd(sourceDir)
 d=dir('*.mat');
 cd ..
 
-% loop through files and run ICA
+% loop through files and run ICA/ICLabel
 for i=1:length(d)
     thisFilename = d(i).name;
     EEG_ATTLAB_ICA(sourceDir,destDir,thisFilename)    
 end
+
